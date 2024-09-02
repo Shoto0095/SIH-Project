@@ -25,17 +25,33 @@ class Welogin extends StatelessWidget {
                 padding: EdgeInsets.only(
                   top: MediaQuery.of(context).size.height * 0.28,
                   left: 40,
-                  right: 0,
+                  right: 40, // Add right padding to center horizontally
                 ),
-                child: Center(
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 20), // Add left padding here
-                    child: CircleAvatar(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment
+                      .center, // Center the elements horizontally
+                  children: [
+                    Column(
+                      children: [
+                        Text('Geo',
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold)),
+                        Text('Attend',
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                    SizedBox(width: 10),
+                    CircleAvatar(
                       backgroundImage: AssetImage('assest/logo.png'),
                       radius: 30.0,
                       backgroundColor: Colors.transparent,
                     ),
-                  ),
+                  ],
                 ),
               )
             ],
