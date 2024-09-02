@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/Screen2.dart';
 import 'package:project/login.dart';
 
 void main() {
@@ -6,7 +7,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialRoute: 'login',
     routes: {
-      'login': (context) => Welogin(),
+      'login': (context) => Screen2(),
     },
   ));
 }
