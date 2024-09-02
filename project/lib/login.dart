@@ -32,13 +32,13 @@ class _WeloginState extends State<Welogin> {
           padding: const EdgeInsets.only(top: 0, bottom: 0, left: 0, right: 0),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 150, left: 40, right: 0),
+              const Padding(
+                padding: EdgeInsets.only(top: 150, left: 40, right: 0),
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 20),
+                    padding: EdgeInsets.only(left: 20),
                     child: CircleAvatar(
-                      backgroundImage: const AssetImage('assest/logo.png'),
+                      backgroundImage: AssetImage('assest/logo.png'),
                       radius: 50.0,
                       backgroundColor: Colors.transparent,
                     ),
@@ -46,13 +46,15 @@ class _WeloginState extends State<Welogin> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: TextFormField(
                   decoration: InputDecoration(
                     hintText: 'Username',
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -60,13 +62,15 @@ class _WeloginState extends State<Welogin> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: TextFormField(
                   decoration: InputDecoration(
                     hintText: 'Enter User Name',
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -74,13 +78,15 @@ class _WeloginState extends State<Welogin> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: DropdownButtonFormField<String>(
                   decoration: InputDecoration(
                     hintText: 'Enter Password',
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -101,7 +107,8 @@ class _WeloginState extends State<Welogin> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: ElevatedButton(
                   onPressed: () {
                     // Handle Signin button click
@@ -135,7 +142,8 @@ class _WeloginState extends State<Welogin> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: OutlinedButton(
                   onPressed: () {
                     // Handle Continue as Guest button click

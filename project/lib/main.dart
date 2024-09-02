@@ -7,7 +7,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialRoute: 'login',
     routes: {
-      'login': (context) => Welogin(),
+      'login': (context) => const Welogin(),
     },
   ));
 }
