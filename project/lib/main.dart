@@ -7,7 +7,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialRoute: 'login',
     routes: {
-      'login': (context) => Screen2(),
+      'login': (context) => Welogin(),
     },
   ));
 }

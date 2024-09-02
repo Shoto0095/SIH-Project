@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
 
-class Welogin extends StatelessWidget {
+class Welogin extends StatefulWidget {
+  const Welogin({super.key});
+
+  @override
+  State<Welogin> createState() => _WeloginState();
+}
+
+class _WeloginState extends State<Welogin> {
+  final List<String> DepartmentOptions = [
+    'Department 1',
+    'Department 2',
+    'Department 3',
+    
+  ];
+
+  String? selectedPassword;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assest/login.png'),
           fit: BoxFit.cover,
@@ -13,12 +29,7 @@ class Welogin extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Padding(
-          padding: EdgeInsets.only(
-            top: 0,
-            bottom: 0,
-            right: 0,
-            left: 0,
-          ),
+          padding: const EdgeInsets.only(top: 0, bottom: 0, left: 0, right: 0),
           child: Column(
             children: [
               Padding(
