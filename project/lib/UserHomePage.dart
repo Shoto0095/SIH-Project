@@ -46,7 +46,7 @@ class UserHomePage extends StatelessWidget {
                       width: 180,
                       height: 180,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient:const  LinearGradient(
                           colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
@@ -62,7 +62,7 @@ class UserHomePage extends StatelessWidget {
                             height: 110,
                           ),
                           const SizedBox(height: 5),
-                          Text(
+                          const Text(
                             'Attendance Recorder',
                             textAlign: TextAlign.center,
                             style: TextStyle(
@@ -79,7 +79,7 @@ class UserHomePage extends StatelessWidget {
                       width: 180,
                       height: 180,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient:const  LinearGradient(
                           colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
@@ -95,7 +95,7 @@ class UserHomePage extends StatelessWidget {
                             height: 110,
                           ),
                           const SizedBox(height: 5),
-                          Text(
+                          const Text(
                             'Attendance Summary',
                             style: TextStyle(
                               color: Colors.white,
@@ -117,7 +117,7 @@ class UserHomePage extends StatelessWidget {
                       width: 180,
                       height: 180,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient:const  LinearGradient(
                           colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
@@ -133,7 +133,7 @@ class UserHomePage extends StatelessWidget {
                             height: 110,
                           ),
                           const SizedBox(height: 5),
-                          Text(
+                          const Text(
                             'Current Sessions',
                             style: TextStyle(
                               color: Colors.white,
@@ -150,7 +150,7 @@ class UserHomePage extends StatelessWidget {
                       width: 180,
                       height: 180,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient:const  LinearGradient(
                           colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
@@ -166,7 +166,7 @@ class UserHomePage extends StatelessWidget {
                             height: 110,
                           ),
                           const SizedBox(height: 5),
-                          Text(
+                          const Text(
                             'Manual Check In/Out*',
                             style: TextStyle(
                               color: Colors.white,
@@ -188,14 +188,14 @@ class UserHomePage extends StatelessWidget {
             child: Container(
               width: double.infinity,
               height: 250,
-              decoration: BoxDecoration(
+              decoration:const  BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(60),
                   topRight: Radius.circular(60),
                 ),
               ),
-              child: Center(
+              child:const  Center(
                 child: Text('Recent Session', style: TextStyle(fontSize: 18)),
               ),
             ),
