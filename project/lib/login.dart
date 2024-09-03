@@ -8,14 +8,14 @@ class Welogin extends StatefulWidget {
 }
 
 class _WeloginState extends State<Welogin> {
-  final List<String> passwordOptions = [
-    'Password 1',
-    'Password 2',
-    'Password 3',
+  final List<String> departmentOptions = [
+    'Department 1',
+    'Department 2',
+    'Department 3',
     // Add more password options here
   ];
 
-  String? selectedPassword;
+  String? selectedDepartment;
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +91,7 @@ class _WeloginState extends State<Welogin> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
-                  items: passwordOptions.map((String option) {
+                  items: departmentOptions.map((String option) {
                     return DropdownMenuItem<String>(
                       value: option,
                       child: Text(option),
@@ -100,10 +100,10 @@ class _WeloginState extends State<Welogin> {
                   onChanged: (value) {
                     // Handle dropdown value change
                     setState(() {
-                      selectedPassword = value!;
+                      selectedDepartment = value!;
                     });
                   },
-                  value: selectedPassword,
+                  value: selectedDepartment,
                 ),
               ),
               Padding(
