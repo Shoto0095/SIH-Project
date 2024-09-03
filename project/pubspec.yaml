@@ -62,6 +62,10 @@ flutter:
   assets:
     - assest/login.png
     - assest/logo.png
+    - assest/current.png
+    - assest/keyboard.png
+    - assest/recoder.png
+    - assest/summary.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

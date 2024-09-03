@@ -9,7 +9,7 @@ class UserHomePage extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            'assest/login.png', 
+            'assest/login.png',
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
@@ -18,11 +18,11 @@ class UserHomePage extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
             leading: const Padding(
-              padding:  EdgeInsets.only(left: 20,),
+              padding: EdgeInsets.only(left: 20.0),
               child: CircleAvatar(
                 backgroundColor: Colors.blue,
-                radius: 50, 
-                child:  Icon(Icons.person, color: Colors.white),
+                radius: 50,
+                child: Icon(Icons.person, color: Colors.white),
               ),
             ),
             actions: [
@@ -43,28 +43,68 @@ class UserHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 150,
-                      height: 150,
+                      width: 180,
+                      height: 180,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
-                          colors: [Colors.green, Colors.lightGreen],
+                          colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assest/recoder.png',
+                            width: 110,
+                            height: 110,
+                          ),
+                          const SizedBox(height: 5),
+                          Text(
+                            'Attendance Recorder',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w900
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(width: 20),
                     Container(
-                      width: 150,
-                      height: 150,
+                      width: 180,
+                      height: 180,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
-                          colors: [Colors.green, Colors.lightGreen],
+                          colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                         ),
                         borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assest/summary.png',
+                            width: 110,
+                            height: 110,
+                          ),
+                          const SizedBox(height: 5),
+                          Text(
+                            'Attendance Summary',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w900
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -74,28 +114,68 @@ class UserHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 150,
-                      height: 150,
+                      width: 180,
+                      height: 180,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
-                          colors: [Colors.green, Colors.lightGreen],
+                          colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assest/current.png',
+                            width: 110,
+                            height: 110,
+                          ),
+                          const SizedBox(height: 5),
+                          Text(
+                            'Current Sessions',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w900
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(width: 20),
                     Container(
-                      width: 150,
-                      height: 150,
+                      width: 180,
+                      height: 180,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
-                          colors: [Colors.green, Colors.lightGreen],
+                          colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                         ),
                         borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assest/keyboard.png',
+                            width: 110,
+                            height: 110,
+                          ),
+                          const SizedBox(height: 5),
+                          Text(
+                            'Manual Check In/Out*',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w900
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -111,12 +191,12 @@ class UserHomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
+                  topLeft: Radius.circular(60),
+                  topRight: Radius.circular(60),
                 ),
               ),
               child: Center(
-                child: Text('Bottom Box', style: TextStyle(fontSize: 18)),
+                child: Text('Recent Session', style: TextStyle(fontSize: 18)),
               ),
             ),
           ),
