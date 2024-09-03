@@ -14,7 +14,6 @@ class _WeloginState extends State<Welogin> {
     'Department 3',
   ];
 
-  String? selectedDepartment;
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +89,6 @@ class _WeloginState extends State<Welogin> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
-                  items: departmentOptions.map((String option) {
                     return DropdownMenuItem<String>(
                       value: option,
                       child: Text(option),
@@ -99,10 +97,8 @@ class _WeloginState extends State<Welogin> {
                   onChanged: (value) {
                     // Handle dropdown value change
                     setState(() {
-                      selectedDepartment = value!;
                     });
                   },
-                  value: selectedDepartment,
                 ),
               ),
               Padding(
