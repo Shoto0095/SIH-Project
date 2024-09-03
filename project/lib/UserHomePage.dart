@@ -34,7 +34,6 @@ class UserHomePage extends StatelessWidget {
               ),
             ],
           ),
-          
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -43,11 +42,14 @@ class UserHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 180,
-                      height: 180,
+                      width: 110,
+                      height: 110,
                       decoration: BoxDecoration(
-                        gradient:const  LinearGradient(
-                          colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color(0xFF69FF97),
+                            Color(0xFF00E4FF),
+                          ],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                         ),
@@ -58,29 +60,31 @@ class UserHomePage extends StatelessWidget {
                         children: [
                           Image.asset(
                             'assest/recoder.png',
-                            width: 110,
-                            height: 110,
+                            width: 100,
+                            height: 100,
                           ),
                           const SizedBox(height: 5),
                           const Text(
                             'Attendance Recorder',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w900
-                            ),
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w900),
                           ),
                         ],
                       ),
                     ),
                     const SizedBox(width: 20),
                     Container(
-                      width: 180,
-                      height: 180,
+                      width: 100,
+                      height: 100,
                       decoration: BoxDecoration(
-                        gradient:const  LinearGradient(
-                          colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color(0xFF69FF97),
+                            Color(0xFF00E4FF),
+                          ],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                         ),
@@ -91,17 +95,16 @@ class UserHomePage extends StatelessWidget {
                         children: [
                           Image.asset(
                             'assest/summary.png',
-                            width: 110,
-                            height: 110,
+                            width: 80,
+                            height: 80,
                           ),
                           const SizedBox(height: 5),
                           const Text(
                             'Attendance Summary',
                             style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w900
-                            ),
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w900),
                             textAlign: TextAlign.center,
                           ),
                         ],
@@ -114,11 +117,14 @@ class UserHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 180,
-                      height: 180,
+                      width: 100,
+                      height: 100,
                       decoration: BoxDecoration(
-                        gradient:const  LinearGradient(
-                          colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color(0xFF69FF97),
+                            Color(0xFF00E4FF),
+                          ],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                         ),
@@ -129,17 +135,16 @@ class UserHomePage extends StatelessWidget {
                         children: [
                           Image.asset(
                             'assest/current.png',
-                            width: 110,
-                            height: 110,
+                            width: 80,
+                            height: 80,
                           ),
                           const SizedBox(height: 5),
                           const Text(
                             'Current Sessions',
                             style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w900
-                            ),
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w900),
                             textAlign: TextAlign.center,
                           ),
                         ],
@@ -147,11 +152,14 @@ class UserHomePage extends StatelessWidget {
                     ),
                     const SizedBox(width: 20),
                     Container(
-                      width: 180,
-                      height: 180,
+                      width: 100,
+                      height: 100,
                       decoration: BoxDecoration(
-                        gradient:const  LinearGradient(
-                          colors: [Color(0xFF69FF97), Color(0xFF00E4FF),],
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color(0xFF69FF97),
+                            Color(0xFF00E4FF),
+                          ],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                         ),
@@ -162,17 +170,16 @@ class UserHomePage extends StatelessWidget {
                         children: [
                           Image.asset(
                             'assest/keyboard.png',
-                            width: 110,
-                            height: 110,
+                            width: 80,
+                            height: 80,
                           ),
                           const SizedBox(height: 5),
                           const Text(
                             'Manual Check In/Out*',
                             style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w900
-                            ),
+                                color: Colors.white,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w900),
                             textAlign: TextAlign.center,
                           ),
                         ],
@@ -188,14 +195,14 @@ class UserHomePage extends StatelessWidget {
             child: Container(
               width: double.infinity,
               height: 250,
-              decoration:const  BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(60),
                   topRight: Radius.circular(60),
                 ),
               ),
-              child:const  Center(
+              child: const Center(
                 child: Text('Recent Session', style: TextStyle(fontSize: 18)),
               ),
             ),

@@ -66,6 +66,7 @@ flutter:
     - assest/keyboard.png
     - assest/recoder.png
     - assest/summary.png
+    - assest/graph.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
