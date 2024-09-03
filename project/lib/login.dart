@@ -12,7 +12,6 @@ class _WeloginState extends State<Welogin> {
     'Department 1',
     'Department 2',
     'Department 3',
-    // Add more password options here
   ];
 
   String? selectedDepartment;
