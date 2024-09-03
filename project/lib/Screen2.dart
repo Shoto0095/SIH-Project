@@ -30,11 +30,11 @@ class _Screen2State extends State<Screen2> {
             children: [
               const Padding(
                 padding: EdgeInsets.only(
-                  top:150,
+                  top: 150,
                   left: 40,
                   right: 0,
                 ),
-                child:  Center(
+                child: Center(
                   child: Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: CircleAvatar(
@@ -46,13 +46,15 @@ class _Screen2State extends State<Screen2> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: TextFormField(
                   decoration: InputDecoration(
                     hintText: 'Username',
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -60,13 +62,15 @@ class _Screen2State extends State<Screen2> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: TextFormField(
                   decoration: InputDecoration(
                     hintText: 'Email',
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -74,13 +78,15 @@ class _Screen2State extends State<Screen2> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: TextFormField(
                   decoration: InputDecoration(
                     hintText: 'Password',
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
-                    contentPadding: const EdgeInsets.symmetric(vertical: 20,horizontal: 20),
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 20, horizontal: 20),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -88,10 +94,10 @@ class _Screen2State extends State<Screen2> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: ElevatedButton(
-                  onPressed: () {
-                  },
+                  onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
@@ -120,10 +126,10 @@ class _Screen2State extends State<Screen2> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: OutlinedButton(
-                  onPressed: () {
-                  },
+                  onPressed: () {},
                   style: OutlinedButton.styleFrom(
                     side: const BorderSide(
                       color: Colors.white,

@@ -111,7 +111,7 @@ class _WeloginState extends State<Welogin> {
                     const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: ElevatedButton(
                   onPressed: () {
-                    // Handle Signin button click
+                    Navigator.pushNamed(context, 'Screen2');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
@@ -121,7 +121,7 @@ class _WeloginState extends State<Welogin> {
                     minimumSize: const Size(double.infinity, 50),
                   ),
                   child: const Text(
-                    'Signin',
+                    'Sign In',
                     style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,

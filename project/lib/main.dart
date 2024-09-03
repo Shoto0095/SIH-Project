@@ -8,6 +8,7 @@ void main() {
     initialRoute: 'login',
     routes: {
       'login': (context) => const Welogin(),
+      'Screen2': (context) => const Screen2(),
     },
   ));
 }
