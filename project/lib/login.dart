@@ -14,6 +14,7 @@ class _WeloginState extends State<Welogin> {
     'Department 3',
   ];
 
+  String? selectedDepartment;
 
   @override
   Widget build(BuildContext context) {
@@ -30,17 +31,36 @@ class _WeloginState extends State<Welogin> {
           padding: const EdgeInsets.only(top: 0, bottom: 0, left: 0, right: 0),
           child: Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.only(top: 150, left: 40, right: 0),
-                child: Center(
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 20),
-                    child: CircleAvatar(
+              Padding(
+                padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.18,
+                  left: 40,
+                  right: 40,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      children: [
+                        Text('Geo',
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold)),
+                        Text('Attend',
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                    SizedBox(width: 10),
+                    CircleAvatar(
                       backgroundImage: AssetImage('assest/logo.png'),
-                      radius: 50.0,
+                      radius: 30.0,
                       backgroundColor: Colors.transparent,
                     ),
-                  ),
+                  ],
                 ),
               ),
               Padding(
@@ -89,6 +109,7 @@ class _WeloginState extends State<Welogin> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
+                  items: departmentOptions.map((String option) {
                     return DropdownMenuItem<String>(
                       value: option,
                       child: Text(option),
@@ -97,8 +118,10 @@ class _WeloginState extends State<Welogin> {
                   onChanged: (value) {
                     // Handle dropdown value change
                     setState(() {
+                      selectedDepartment = value!;
                     });
                   },
+                  value: selectedDepartment,
                 ),
               ),
               Padding(
@@ -139,20 +162,11 @@ class _WeloginState extends State<Welogin> {
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                child: OutlinedButton(
+                child: TextButton(
                   onPressed: () {
                     // Handle Continue as Guest button click
+                    Navigator.pushNamed(context, 'UserHomePage');
                   },
-                  style: OutlinedButton.styleFrom(
-                    side: const BorderSide(
-                      color: Colors.white,
-                      width: 2.0,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    minimumSize: const Size(double.infinity, 50),
-                  ),
                   child: const Text(
                     'Continue as Guest',
                     style: TextStyle(
