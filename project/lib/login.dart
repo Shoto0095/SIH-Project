@@ -8,7 +8,10 @@ class Welogin extends StatefulWidget {
 }
 
 class _WeloginState extends State<Welogin> {
-    // Add more password options here
+  final List<String> departmentOptions = [
+    'Department 1',
+    'Department 2',
+    'Department 3',
   ];
 
 
