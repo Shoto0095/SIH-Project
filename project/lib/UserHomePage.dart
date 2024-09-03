@@ -42,8 +42,8 @@ class UserHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 110,
-                      height: 110,
+                      width: 150,
+                      height: 150,
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           colors: [
@@ -60,8 +60,8 @@ class UserHomePage extends StatelessWidget {
                         children: [
                           Image.asset(
                             'assest/recoder.png',
-                            width: 100,
-                            height: 100,
+                            width: 85,
+                            height: 85,
                           ),
                           const SizedBox(height: 5),
                           const Text(
@@ -69,16 +69,17 @@ class UserHomePage extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 10,
-                                fontWeight: FontWeight.w900),
+                                fontSize: 18,
+                                
+                                fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
                     ),
                     const SizedBox(width: 20),
                     Container(
-                      width: 100,
-                      height: 100,
+                      width: 150,
+                      height: 150,
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           colors: [
@@ -95,15 +96,15 @@ class UserHomePage extends StatelessWidget {
                         children: [
                           Image.asset(
                             'assest/summary.png',
-                            width: 80,
-                            height: 80,
+                            width: 85,
+                            height: 85,
                           ),
                           const SizedBox(height: 5),
                           const Text(
                             'Attendance Summary',
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 10,
+                                fontSize: 18,
                                 fontWeight: FontWeight.w900),
                             textAlign: TextAlign.center,
                           ),
@@ -117,8 +118,8 @@ class UserHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 100,
-                      height: 100,
+                      width: 150,
+                      height: 150,
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           colors: [
@@ -135,15 +136,15 @@ class UserHomePage extends StatelessWidget {
                         children: [
                           Image.asset(
                             'assest/current.png',
-                            width: 80,
-                            height: 80,
+                            width: 85,
+                            height: 85,
                           ),
                           const SizedBox(height: 5),
                           const Text(
                             'Current Sessions',
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 10,
+                                fontSize: 18,
                                 fontWeight: FontWeight.w900),
                             textAlign: TextAlign.center,
                           ),
@@ -152,8 +153,8 @@ class UserHomePage extends StatelessWidget {
                     ),
                     const SizedBox(width: 20),
                     Container(
-                      width: 100,
-                      height: 100,
+                      width: 150,
+                      height: 150,
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           colors: [
@@ -170,15 +171,15 @@ class UserHomePage extends StatelessWidget {
                         children: [
                           Image.asset(
                             'assest/keyboard.png',
-                            width: 80,
-                            height: 80,
+                            width: 85,
+                            height: 85,
                           ),
                           const SizedBox(height: 5),
                           const Text(
                             'Manual Check In/Out*',
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 10,
+                                fontSize: 18,
                                 fontWeight: FontWeight.w900),
                             textAlign: TextAlign.center,
                           ),
@@ -194,7 +195,7 @@ class UserHomePage extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: Container(
               width: double.infinity,
-              height: 250,
+              height: 200,
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
