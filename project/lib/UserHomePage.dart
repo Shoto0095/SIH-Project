@@ -41,74 +41,81 @@ class UserHomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      width: 150,
-                      height: 150,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color(0xFF69FF97),
-                            Color(0xFF00E4FF),
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
+                    GestureDetector(
+                      onTap: () {
+                        // Navigator.pushNamed(context, 'Geolocation');
+                      },
+                      child: Container(
+                        width: 150,
+                        height: 150,
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color(0xFF69FF97),
+                              Color(0xFF00E4FF),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assest/recoder.png',
-                            width: 85,
-                            height: 85,
-                          ),
-                          const SizedBox(height: 5),
-                          const Text(
-                            'Attendance Recorder',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assest/recoder.png',
+                              width: 85,
+                              height: 85,
+                            ),
+                            const SizedBox(height: 5),
+                            const Text(
+                              'Attendance Recorder',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(width: 20),
-                    Container(
-                      width: 150,
-                      height: 150,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color(0xFF69FF97),
-                            Color(0xFF00E4FF),
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        width: 150,
+                        height: 150,
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color(0xFF69FF97),
+                              Color(0xFF00E4FF),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assest/summary.png',
-                            width: 85,
-                            height: 85,
-                          ),
-                          const SizedBox(height: 5),
-                          const Text(
-                            'Attendance Summary',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w900),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assest/summary.png',
+                              width: 85,
+                              height: 85,
+                            ),
+                            const SizedBox(height: 5),
+                            const Text(
+                              'Attendance Summary',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w900),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -117,73 +124,81 @@ class UserHomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      width: 150,
-                      height: 150,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color(0xFF69FF97),
-                            Color(0xFF00E4FF),
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, 'Geolocation');
+                      },
+                      child: Container(
+                        width: 150,
+                        height: 150,
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color(0xFF69FF97),
+                              Color(0xFF00E4FF),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assest/current.png',
-                            width: 85,
-                            height: 85,
-                          ),
-                          const SizedBox(height: 5),
-                          const Text(
-                            'Current Sessions',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w900),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assest/current.png',
+                              width: 85,
+                              height: 85,
+                            ),
+                            const SizedBox(height: 5),
+                            const Text(
+                              'Current Sessions',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w900),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(width: 20),
-                    Container(
-                      width: 150,
-                      height: 150,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color(0xFF69FF97),
-                            Color(0xFF00E4FF),
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
+                    GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        width: 150,
+                        height: 150,
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color(0xFF69FF97),
+                              Color(0xFF00E4FF),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assest/keyboard.png',
-                            width: 85,
-                            height: 85,
-                          ),
-                          const SizedBox(height: 5),
-                          const Text(
-                            'Manual Check In/Out*',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w900),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assest/keyboard.png',
+                              width: 85,
+                              height: 85,
+                            ),
+                            const SizedBox(height: 5),
+                            const Text(
+                              'Manual Check In/Out*',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w900),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],

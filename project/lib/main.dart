@@ -14,6 +14,7 @@ void main() {
       'login': (context) => const Welogin(),
       'Screen2': (context) => const Screen2(),
       'UserHomePage': (context) => const UserHomePage(),
+      'Geolocation': (context) => const Geolocation(),
     },
   ));
 }
