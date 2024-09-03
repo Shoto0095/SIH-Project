@@ -8,14 +8,13 @@ class Welogin extends StatefulWidget {
 }
 
 class _WeloginState extends State<Welogin> {
-  final List<String> passwordOptions = [
-    'Password 1',
-    'Password 2',
-    'Password 3',
-    // Add more password options here
+  final List<String> DepartmentOptions = [
+    'Department 1',
+    'Department 2',
+    'Department 3',
   ];
 
-  String? selectedPassword;
+  String? selectedDepartment;
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +31,13 @@ class _WeloginState extends State<Welogin> {
           padding: const EdgeInsets.only(top: 0, bottom: 0, left: 0, right: 0),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 150, left: 40, right: 0),
+              const Padding(
+                padding:  EdgeInsets.only(top: 150, left: 40, right: 0),
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 20),
+                    padding:  EdgeInsets.only(left: 20),
                     child: CircleAvatar(
-                      backgroundImage: const AssetImage('assest/logo.png'),
+                      backgroundImage:  AssetImage('assest/logo.png'),
                       radius: 50.0,
                       backgroundColor: Colors.transparent,
                     ),
@@ -63,7 +62,7 @@ class _WeloginState extends State<Welogin> {
                 padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'Enter User Name',
+                    hintText: 'Enter Password',
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
                     contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -77,7 +76,7 @@ class _WeloginState extends State<Welogin> {
                 padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: DropdownButtonFormField<String>(
                   decoration: InputDecoration(
-                    hintText: 'Enter Password',
+                    hintText: 'Enter Department',
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
                     contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -85,19 +84,19 @@ class _WeloginState extends State<Welogin> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
-                  items: passwordOptions.map((String option) {
+                  items: DepartmentOptions.map((String option) {
                     return DropdownMenuItem<String>(
                       value: option,
                       child: Text(option),
                     );
                   }).toList(),
                   onChanged: (value) {
-                    // Handle dropdown value change
+                    
                     setState(() {
-                      selectedPassword = value!;
+                      selectedDepartment = value!;
                     });
                   },
-                  value: selectedPassword,
+                  value: selectedDepartment,
                 ),
               ),
               Padding(
