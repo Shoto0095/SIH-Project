@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:location/location.dart' as MyLocation;
+import 'dart:math'; // Import the math library
 
 class Geolocation extends StatefulWidget {
   const Geolocation({super.key});
@@ -13,78 +15,87 @@ class Geolocation extends StatefulWidget {
 class _GeolocationState extends State<Geolocation> {
   String currentAddress = "My Address";
   Position? currentPosition;
+  bool isCheckedIn = false;
+  final MyLocation.Location _locationService = MyLocation.Location();
+
+  // Defined check-in location
+  final double checkInLatitude = 28.6338828;
+  final double checkInLongitude = 77.4470319;
 
   Future<void> _determinePosition() async {
     bool serviceEnabled;
     LocationPermission permission;
 
-    // Check if location services are enabled
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      Fluttertoast.showToast(msg: "Please enable location services");
-      return; // Exit the function if location services are disabled
+      Fluttertoast.showToast(msg: "Please Keep Your location on");
+      return; // Exit the function if location services are not enabled
     }
 
-    // Check location permission status
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        Fluttertoast.showToast(msg: "Location permission denied");
-        return; // Exit the function if permission remains denied
+        Fluttertoast.showToast(msg: "Location permission is denied");
+        return; // Exit the function if permission is denied
       }
     }
 
     if (permission == LocationPermission.deniedForever) {
-      Fluttertoast.showToast(msg: "Location permission denied forever");
+      Fluttertoast.showToast(msg: "permission is denied forever");
       return; // Exit the function if permission is denied forever
     }
 
     try {
-      // Get current position with high accuracy
       Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high,
       );
 
-      // Reverse geocode the position to get address details
-      List<Placemark> placemarks = await placemarkFromCoordinates(
-        position.latitude,
-        position.longitude,
-      );
+      List<Placemark> placemarks =
+          await placemarkFromCoordinates(position.latitude, position.longitude);
       Placemark place = placemarks.first;
 
-      // Update state with retrieved address and position
       setState(() {
         currentPosition = position;
-        currentAddress =
-            "${place.locality}, ${place.postalCode}, ${place.country}";
+currentAddress = "${place.locality}, ${place.postalCode}, ${place.country}";        isCheckedIn = _checkCheckInStatus(position.latitude, position.longitude);
       });
     } catch (e) {
-      print(e); // Log any errors
+      print(e);
     }
+  }
+
+  bool _checkCheckInStatus(double userLatitude, double userLongitude) {
+    const double earthRadius = 6371000.0; // Earth's radius in meters
+
+    double latDiff = (userLatitude - checkInLatitude)*(pi/180);
+    double lngDiff = (userLongitude - checkInLongitude)*(pi/180);
+
+    double a = sin(latDiff / 2) * sin(latDiff / 2) +
+        cos(userLatitude*(pi/180)) * cos(checkInLatitude*(pi/180)) *
+            sin(lngDiff / 2) * sin(lngDiff / 2);
+    double c = 2 * atan2(sqrt(a), sqrt(1 - a));
+
+    double distance = earthRadius * c;
+
+    return distance <= 3; // Check if distance is within 50 meters
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Geolocation"),
-      ),
+      appBar: AppBar(title: const Text("Geo location")),
       body: Center(
-        child: Column(
-          children: [
-            Text(
-              currentAddress,
-              style: const TextStyle(fontSize: 20),
-            ),
-            if (currentPosition != null) Text("Latitude: ${currentPosition!.latitude}"),
-            if (currentPosition != null) Text("Longitude: ${currentPosition!.longitude}"),
-            TextButton(
-              onPressed: _determinePosition,
-              child: const Text("Locate Me"),
-            ),
-          ],
-        ),
+        child: Column(children: [
+          Text(currentAddress, style: const TextStyle(fontSize: 20)),
+          if (currentPosition != null) Text("Latitude: ${currentPosition!.latitude}"),
+          if (currentPosition != null) Text("Longitude: ${currentPosition!.longitude}"),
+          Text(isCheckedIn ? "Checked In" : "Not Checked In"),
+          TextButton(
+              onPressed: () {
+                _determinePosition();
+              },
+              child: const Text("Locate Me"))
+        ]),
       ),
     );
   }
