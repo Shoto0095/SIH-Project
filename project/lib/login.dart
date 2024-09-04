@@ -68,7 +68,7 @@ class _WeloginState extends State<Welogin> {
                     const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'Username',
+                    hintText: 'Employer ID',
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
                     contentPadding: const EdgeInsets.symmetric(
@@ -84,7 +84,7 @@ class _WeloginState extends State<Welogin> {
                     const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'Enter User Name',
+                    hintText: 'Enter Branch',
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
                     contentPadding: const EdgeInsets.symmetric(
