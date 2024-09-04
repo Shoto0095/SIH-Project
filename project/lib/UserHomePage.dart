@@ -43,7 +43,7 @@ class UserHomePage extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        // Navigator.pushNamed(context, 'Geolocation');
+                        Navigator.pushNamed(context, 'Geolocation');
                       },
                       child: Container(
                         width: 150,
@@ -82,7 +82,9 @@ class UserHomePage extends StatelessWidget {
                     ),
                     const SizedBox(width: 20),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, 'summary');
+                      },
                       child: Container(
                         width: 150,
                         height: 150,

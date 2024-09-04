@@ -15,6 +15,7 @@ void main() {
       'Screen2': (context) => const Screen2(),
       'UserHomePage': (context) => const UserHomePage(),
       'Geolocation': (context) => const Geolocation(),
+      'summary': (context) => const Summary(),
     },
   ));
 }

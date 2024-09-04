@@ -164,7 +164,6 @@ class _WeloginState extends State<Welogin> {
                     const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: TextButton(
                   onPressed: () {
-                    // Handle Continue as Guest button click
                     Navigator.pushNamed(context, 'UserHomePage');
                   },
                   child: const Text(
