@@ -100,7 +100,7 @@ class _WeloginState extends State<Welogin> {
                     const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 child: DropdownButtonFormField<String>(
                   decoration: InputDecoration(
-                    hintText: 'Enter Password',
+                    hintText: 'Enter Department',
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.3),
                     contentPadding: const EdgeInsets.symmetric(

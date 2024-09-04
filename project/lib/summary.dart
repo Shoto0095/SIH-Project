@@ -16,5 +16,6 @@ class _WeSummarystate extends State<Summary> {
             image: AssetImage('assest/login.png'), fit: BoxFit.cover),
       ),
     );
+    Column();
   }
 }
