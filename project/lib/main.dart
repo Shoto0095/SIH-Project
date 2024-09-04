@@ -16,6 +16,7 @@ void main() {
       'UserHomePage': (context) => const UserHomePage(),
       'Geolocation': (context) => const Geolocation(),
       'summary': (context) => const Summary(),
+      'DeviceLocation': (context) => const Geolocation(),
     },
   ));
 }
