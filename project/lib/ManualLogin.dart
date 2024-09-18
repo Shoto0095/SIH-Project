@@ -61,8 +61,7 @@ class _ManualAttendanceState extends State<ManualAttendance> {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(
-                  'assest/login.png'), // Replace with your actual image path
+              image: AssetImage('assest/login.png'),
               fit: BoxFit.cover,
             ),
           ),
@@ -76,8 +75,7 @@ class _ManualAttendanceState extends State<ManualAttendance> {
                     child: Padding(
                       padding: EdgeInsets.only(left: 20),
                       child: CircleAvatar(
-                        backgroundImage: AssetImage(
-                            'assest/logo.png'), // Replace with your actual image path
+                        backgroundImage: AssetImage('assest/logo.png'),
                         radius: 50.0,
                         backgroundColor: Colors.transparent,
                       ),
@@ -96,8 +94,6 @@ class _ManualAttendanceState extends State<ManualAttendance> {
                   ),
                 ),
                 const SizedBox(height: 20),
-
-                // White space to display check-in or check-out status
                 Container(
                   margin: const EdgeInsets.symmetric(horizontal: 20),
                   padding: const EdgeInsets.all(20),
@@ -117,8 +113,6 @@ class _ManualAttendanceState extends State<ManualAttendance> {
                   ),
                 ),
                 const SizedBox(height: 50),
-
-                // Swipe Button using Slidable
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Slidable(
