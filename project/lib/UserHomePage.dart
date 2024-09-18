@@ -43,7 +43,7 @@ class UserHomePage extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, 'Geolocation');
+                        Navigator.pushNamed(context, 'DeviceLocation');
                       },
                       child: Container(
                         width: 150,
